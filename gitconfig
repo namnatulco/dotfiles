@@ -1,18 +1,21 @@
 [alias]
-  co = checkout
-  diff = diff --patience
-  cdiff = diff --color-words --patience
-  cshow = show --color-words --patience
-  treelog = log --pretty=oneline --graph --all
-  lg = log --pretty=oneline
+	co = checkout
+	diff = diff --patience
+	cdiff = diff --color-words --patience
+	cshow = show --color-words --patience
 [color]
   diff = auto
   status = auto
   branch = auto
 [core]
-  editor = vim
+	editor = vim
+[format]
+	pretty = format:%h %Cblue%d %Cred%cn %Cgreen%cr %Creset %s
 [merge]
-  conflictstyle = diff3
-  summary = true
+	tool = meld
+	conflictstyle = diff3
+	summary = true
+[push]
+	default = simple
 [diff "tex"]
-  xfuncname = "^(\\\\(sub)*section\\{.*)$" 
+	xfuncname = "^(\\\\(sub)*section\\{.*)$"

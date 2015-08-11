@@ -18,7 +18,7 @@ fi
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
-HISTCONTROL=erasedups:ignorespace
+HISTCONTROL=erasedups:ignoreboth
 
 # append to the history file, don't overwrite it
 shopt -s histappend
@@ -117,12 +117,23 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+export LANG=en_US.UTF-8
 
 #do not save boring two-symbol commands like ls, ps in history
 HISTIGNORE='??'
 
-#start tmux
-#[[ $TERM != "screen" ]] && exec tmux
+# connection script so I don't have to remember the ssh switches
+#TODO add check for existing tunnel.
+function proxyconnect(){
+	if [ -z "$1" ];
+	then
+		echo "connecting to 91.121.197.132..."
+		ssh -D 8080 -f -N -q 91.121.197.132
+	else
+		echo "connecting to $1..."
+		ssh -D 8080 -f -N -q "$1"
+	fi
+}
 
 #add current directory to $PATH
 export PATH=$PATH:.
