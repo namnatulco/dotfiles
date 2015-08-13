@@ -17,6 +17,10 @@ set tags=./tags;/ "to search for tagfiles recursively up to the root-directory
 set ignorecase    "ignore case for searches by default
 set hlsearch      "enable search highlighting, although this is default on many distros
 
+set spell
+set spelllang=en
+set spellfile="/home/namnatulco/.vim/spell/en.utf-8.add"
+
 filetype indent on
 
 if exists("did_load_filetypes")                         "only do this after filetype detection finishes
@@ -30,6 +34,12 @@ if exists("did_load_filetypes")                         "only do this after file
 endif
 
 
+"disable spellcheck to F4
+map <F4> :set nospell<CR>
+"english spellcheck to F5
+map <F5> :set spelllang=en spellfile="/home/namnatulco/.vim/spell/en.utf-8.add"<CR>
+"german spellcheck to F6
+map <F6> :set spelllang=de_de spellfile="/home/namnatulco/.vim/spell/de.utf-8.add"<CR>
 "map file explorer to F2
 map <F2> :e .<CR>
 "delete trailing spaces with F3
