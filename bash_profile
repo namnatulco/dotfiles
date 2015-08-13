@@ -10,3 +10,5 @@ fi
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
 export PATH
+
+setxkbmap -layout us -variant altgr-intl -option nodeadkeys
