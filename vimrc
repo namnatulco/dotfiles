@@ -14,6 +14,7 @@ set showcmd       "show command in right lower corner while typing
 set bg=dark       "tell vim that the background is dark
 set number        "show linenumbers
 set tags=./tags;/ "to search for tagfiles recursively up to the root-directory
+set ignorecase    "ignore case for searches by default
 set hlsearch      "enable search highlighting, although this is default on many distros
 
 filetype indent on
