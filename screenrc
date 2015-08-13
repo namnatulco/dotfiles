@@ -1,1 +1,0 @@
-hardstatus alwayslastline "%{kw}Host: %H | %d-%m-%y %c | Load: %l | %w"
