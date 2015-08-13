@@ -14,6 +14,7 @@ set showcmd       "show command in right lower corner while typing
 set bg=dark       "tell vim that the background is dark
 set number        "show linenumbers
 set tags=./tags;/ "to search for tagfiles recursively up to the root-directory
+set hlsearch      "enable search highlighting, although this is default on many distros
 
 filetype indent on
 
@@ -32,3 +33,5 @@ endif
 map <F2> :e .<CR>
 "delete trailing spaces with F3
 map <special> <F3> :%s/\s\+$//gc<CR>
+"map <enter> to remove currently highlighted search results
+nnoremap <Space> :noh<CR><Space>
