@@ -44,5 +44,6 @@ map <F6> :set spelllang=de_de spellfile="/home/namnatulco/.vim/spell/de.utf-8.ad
 map <F2> :e .<CR>
 "delete trailing spaces with F3
 map <special> <F3> :%s/\s\+$//gc<CR>
-"map <enter> to remove currently highlighted search results
+"map the space to remove currently highlighted search results in addition to a
+"space key press
 nnoremap <Space> :noh<CR><Space>
