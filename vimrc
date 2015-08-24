@@ -37,9 +37,9 @@ endif
 "disable spellcheck to F4
 map <F4> :set nospell<CR>
 "english spellcheck to F5
-map <F5> :set spelllang=en spellfile="/home/namnatulco/.vim/spell/en.utf-8.add"<CR>
+map <F5> :set spell spelllang=en spellfile="/home/namnatulco/.vim/spell/en.utf-8.add"<CR>
 "german spellcheck to F6
-map <F6> :set spelllang=de_de spellfile="/home/namnatulco/.vim/spell/de.utf-8.add"<CR>
+map <F6> :set spell spelllang=de_de spellfile="/home/namnatulco/.vim/spell/de.utf-8.add"<CR>
 "map file explorer to F2
 map <F2> :e .<CR>
 "delete trailing spaces with F3
