@@ -17,6 +17,8 @@ set tags=./tags;/ "to search for tagfiles recursively up to the root-directory
 set ignorecase    "ignore case for searches by default
 set hlsearch      "enable search highlighting, although this is default on many distros
 
+set path=.,**;**/src/,/usr/include,
+
 set spell
 set spelllang=en
 set spellfile="/home/namnatulco/.vim/spell/en.utf-8.add"
