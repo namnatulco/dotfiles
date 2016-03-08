@@ -125,6 +125,11 @@ HISTIGNORE='??'
 # connection script so I don't have to remember the ssh switches
 #TODO add check for existing tunnel.
 function proxyconnect(){
+  TMP="`ps aux | grep 'ssh -D 8080 -f -N -q' | cut -d'q' -f2`"
+  if [ ! -z "$TMP" ]; then
+    echo "Warning, tunnel already active (to$TMP)!"
+    return;
+  fi
 	if [ -z "$1" ];
 	then
 		echo "connecting to 91.121.197.132..."
@@ -133,6 +138,9 @@ function proxyconnect(){
 		echo "connecting to $1..."
 		ssh -D 8080 -f -N -q "$1"
 	fi
+  if [ "$?" -ne 0 ]; then
+    echo "ssh returned non-zero status code"
+  fi
 }
 
 #add current directory to $PATH
