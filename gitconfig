@@ -22,4 +22,6 @@
 [push]
 	default = simple
 [diff "tex"]
-	xfuncname = "^(\\\\(sub)*section\\{.*)$"
+  xfuncname = "^(\\\\(sub)*section\\{.*)$"
+[diff "pdfdiff"]
+  command = diffpdf
