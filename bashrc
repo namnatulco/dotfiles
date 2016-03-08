@@ -143,8 +143,24 @@ function proxyconnect(){
   fi
 }
 
-#add current directory to $PATH
-export PATH=$PATH:.
+export OLD_PATH=$PATH
+export OLD_LD_LIBRARY_PATH=$LD_LIBRARY_PATH
+
+function opp46(){
+  #add current directory and OMNeT++ binary folder to $PATH
+  export PATH=$OLD_PATH:~/simulation/omnetpp-4.6/bin:.
+  #add omnet++ libs to library path
+  export LD_LIBRARY_PATH=$OLD_LD_LIBRARY_PATH:~/simulation/omnetpp-4.6/lib
+}
+
+function opp5b3(){
+  #add current directory and OMNeT++ binary folder to $PATH
+  export PATH=$OLD_PATH:~/simulation/omnetpp-5b3/bin:.
+  #add omnet++ libs to library path
+  export LD_LIBRARY_PATH=$OLD_LD_LIBRARY_PATH:~/simulation/omnetpp-5b3/lib
+}
+
+opp46
 
 #make a cool function for debugging a running process
 #argument is the pid
