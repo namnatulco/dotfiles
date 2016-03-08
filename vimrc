@@ -21,7 +21,7 @@ set path=.,**;**/src/,/usr/include,
 
 set spell
 set spelllang=en
-set spellfile="/home/namnatulco/.vim/spell/en.utf-8.add"
+set spellfile=/home/namnatulco/.vim/spell/en.utf-8.add,/home/namnatulco/.vim/spell/names.utf-8.add
 
 filetype indent on
 
@@ -39,9 +39,9 @@ endif
 "disable spellcheck to F4
 map <F4> :set nospell<CR>
 "english spellcheck to F5
-map <F5> :set spell spelllang=en spellfile="/home/namnatulco/.vim/spell/en.utf-8.add"<CR>
+map <F5> :set spell spelllang=en spellfile=/home/namnatulco/.vim/spell/en.utf-8.add,/home/namnatulco/.vim/spell/names.utf-8.add <CR> <CR>
 "german spellcheck to F6
-map <F6> :set spell spelllang=de_de spellfile="/home/namnatulco/.vim/spell/de.utf-8.add"<CR>
+map <F6> :set spell spelllang=de_de spellfile=/home/namnatulco/.vim/spell/de.utf-8.add,/home/namnatulco/.vim/spell/names.utf-8.add <CR> <CR>
 "map file explorer to F2
 map <F2> :e .<CR>
 "delete trailing spaces with F3
