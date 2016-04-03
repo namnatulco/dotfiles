@@ -153,11 +153,11 @@ function opp46(){
   export LD_LIBRARY_PATH=$OLD_LD_LIBRARY_PATH:~/simulation/omnetpp-4.6/lib
 }
 
-function opp5b3(){
+function opp50(){
   #add current directory and OMNeT++ binary folder to $PATH
-  export PATH=$OLD_PATH:~/simulation/omnetpp-5b3/bin:.
+  export PATH=$OLD_PATH:~/simulation/omnetpp-5.0/bin:.
   #add omnet++ libs to library path
-  export LD_LIBRARY_PATH=$OLD_LD_LIBRARY_PATH:~/simulation/omnetpp-5b3/lib
+  export LD_LIBRARY_PATH=$OLD_LD_LIBRARY_PATH:~/simulation/omnetpp-5.0/lib
 }
 
 opp46
