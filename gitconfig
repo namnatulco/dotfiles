@@ -3,7 +3,8 @@
 	co = checkout
 	diff = diff --patience
 	cdiff = diff --color-words --patience
-	cshow = show --color-words --patience
+  cshow = show --color-words --patience
+  fulllog = log --pretty=full
 [color]
   diff = auto
   status = auto
