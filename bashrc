@@ -123,17 +123,18 @@ export LANG=en_US.UTF-8
 HISTIGNORE='??'
 
 # connection script so I don't have to remember the ssh switches
-#TODO add check for existing tunnel.
 function proxyconnect(){
   TMP="`ps aux | grep 'ssh -D 8080 -f -N -q' | cut -d'q' -f2`"
   if [ ! -z "$TMP" ]; then
     echo "Warning, tunnel already active (to$TMP)!"
+    echo "PID: `ps aux | grep 'ssh -D 8080 -f -N -q' | grep -v 'grep' | cut -d' ' -f2-3`"
+    #note: cut by ' ', because grep converts tabs into spaces, and -f2-3 because the amount of spaces seems to vary
     return;
   fi
 	if [ -z "$1" ];
 	then
-		echo "connecting to 91.121.197.132..."
-		ssh -D 8080 -f -N -q 91.121.197.132
+		echo "connecting to namnatulco.eu..."
+		ssh -D 8080 -f -N -q namnatulco.eu
 	else
 		echo "connecting to $1..."
 		ssh -D 8080 -f -N -q "$1"
